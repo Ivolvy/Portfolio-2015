@@ -48,6 +48,8 @@ html, body{
 /*----------------------------------------------*/
 #introduction-page{
   overflow: auto;
+  background: #f4f3f8;
+  padding-bottom: 200px;
 }
 #introduction-page .title{
   text-align: center;
@@ -65,11 +67,28 @@ html, body{
 }
 
 #introduction-page article.first{
-  margin-top: 600px;
+  margin-top: 800px;
+  text-align: right;
+  padding-right: 50px;
 }
 
-#introduction-page article.second,
+#introduction-page article.second{
+  padding-top: 150px;
+  text-align: left;
+  padding-left: 50px;
+}
 #introduction-page article.third{
-  padding-top: 50px;
+  padding-top: 150px;
+  text-align: right;
+  padding-right: 50px;
+}
+#introduction-page article.fourth{
+  padding-top: 150px;
+  text-align: left;
+  padding-left: 50px;
 }
 
+.article-title {
+  font-size: 35px;
+  margin-bottom: 25px;
+}
