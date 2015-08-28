@@ -21,6 +21,27 @@
 </head>
 
 <body>
+<div id="hamb-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+        <h2 class="hide">Main navigation</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Who?</a></li>
+            <li><a href="#">What?</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+
 
  <div class="hero-gallery js-flickity" data-flickity-options='{ "wrapAround": false, "prevNextButtons": true,
 "pageDots": false, "contain": true}'>
@@ -119,34 +140,36 @@
                     <div class="col-md-12">
                         <div class="title">BIG PAGE'S TITLE</div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="input input--haruki">
-                                <input class="input__field input__field--haruki" type="text" id="input-1" />
-                                <label class="input__label input__label--haruki" for="input-1">
-                                    <span class="input__label-content input__label-content--haruki">First Name</span>
-                                </label>
-                            </span>
+                    <section id="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="input input--haruki">
+                                    <input class="input__field input__field--haruki" type="text" id="input-1" />
+                                    <label class="input__label input__label--haruki" for="input-1">
+                                        <span class="input__label-content input__label-content--haruki">Your Name</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="input input--haruki">
+                                    <input class="input__field input__field--haruki" type="text" id="input-2" />
+                                    <label class="input__label input__label--haruki" for="input-2">
+                                        <span class="input__label-content input__label-content--haruki">Your e-mail</span>
+                                    </label>
+                                </span>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <span class="input input--haruki">
-                                <input class="input__field input__field--haruki" type="text" id="input-2" />
-                                <label class="input__label input__label--haruki" for="input-2">
-                                    <span class="input__label-content input__label-content--haruki">E-mail</span>
-                                </label>
-                            </span>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span id="message-input" class="input input--haruki">
+                                    <textarea class="input__field input__field--haruki" type="text" id="input-3"></textarea>
+                                    <label class="input__label input__label--haruki" for="input-3">
+                                        <span class="input__label-content input__label-content--haruki">Your message</span>
+                                    </label>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span id="message-input" class="input input--haruki">
-                                <textarea class="input__field input__field--haruki" type="text" id="input-3"></textarea>
-                                <label class="input__label input__label--haruki" for="input-3">
-                                    <span class="input__label-content input__label-content--haruki">Message</span>
-                                </label>
-                            </span>
-                        </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -173,7 +196,7 @@
     new WOW().init();
 </script>
 <script> // USED FOR THE FORM CONTACT
-    [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+    [].slice.call( document.querySelectorAll( '.input__field' ) ).forEach( function( inputEl ) {
         // in case the input is already filled..
         if( inputEl.value.trim() !== '' ) {
             classie.add( inputEl.parentNode, 'input--filled' );
@@ -194,7 +217,15 @@
         }
     }
 </script>
-
+<script>
+    //USED FOR THE HAMB MENU
+    $(document).ready(function(){
+        $('#hamb-menu').click(function(){
+            $(this).toggleClass('open');
+            $('.overlay').toggleClass('open');
+        });
+    });
+</script>
 
 
 <script>
