@@ -92,3 +92,23 @@ html, body{
   font-size: 35px;
   margin-bottom: 25px;
 }
+
+
+/*----------------------------------------------*/
+/*------------CONTACT PAGE VIEW------------*/
+/*----------------------------------------------*/
+
+#contact-page{
+  background: #f4f3f8;
+}
+
+#contact-page .title{
+  text-align: center;
+  font-size: 50px;
+  padding: 100px;
+}
+
+#contact-page #message-input textarea,
+#contact-page #message-input label{
+  height: 150px;
+}
