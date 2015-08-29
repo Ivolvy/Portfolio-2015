@@ -163,8 +163,8 @@ html, body{
   opacity: 0;
 }
 .overlay.open li {
-  -webkit-animation: fadeInRight .5s ease forwards;
-  animation: fadeInRight .5s ease forwards;
+  -webkit-animation: fadeInUp .5s ease forwards;
+  animation: fadeInUp .5s ease forwards;
   -webkit-animation-delay: .35s;
   animation-delay: .35s;
 }
