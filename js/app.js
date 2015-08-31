@@ -35,11 +35,11 @@ $(document).ready(function(){
 });
 
 //INITIALIZE FLICKITY
-var elem = document.querySelector('.hero-gallery');
+var elem = document.querySelector('.website-gallery');
 var flkty = new Flickity( elem, {
     // options
     wrapAround: false,
-    prevNextButton: true,
+    prevNextButtons: true,
     pageDots: false,
     contain: true
 });
