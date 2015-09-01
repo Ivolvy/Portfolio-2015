@@ -1,85 +1,130 @@
+/*The crazy talking Robot*/
+var Ivolvy = function() {
+    var that = this;
 
-var captionLength = 0;
-var caption = '';
+    var captionLength = 0;
+    var caption = '';
+    var sequence = ["0","1","2"]; //The order to write the texts
+    var indexSequence = 0;
 
-//load the robot's texts
-var obj = JSON.parse(data);
-//obj.text[0].sentence
+    var currentScreen = 'home';
 
-$(document).ready(function() {
-    setInterval ('cursorAnimation()', 600);
-    captionEl = $('#caption');
+    //load the robot's texts
+    //var data = JSON.parse(data);
 
+    this.init = function(){
+        setInterval (that.cursorAnimation, 600);
+        captionEl = $('#caption');
 
-    setWriteAndEraseSequence();
+        //setWriteAndEraseSequence();
+        this.loadSequenceSentences();
+    };
 
-    $('#test-erasing').click(function(){
-        eraseSentence();
-    });
-});
+    this.setWriteAndEraseSequence = function(){
+        that.loadRandomSentence();
+        setTimeout(that.eraseSentence, 5000);
+    };
 
-
-
-function setWriteAndEraseSequence(){
-    loadRandomSentence();
-    setTimeout(eraseSentence, 5000);
-}
-
-function loadRandomSentence(){
-    var indexSentence = getRandomSentence();
-    var caption = obj.text[indexSentence].sentence.toString();
-    writeSentence(caption);
-}
-
-function getRandomSentence(){
-    var maxItem = getNumberOfSentences();
-    return Math.floor((Math.random() * maxItem));
-}
-
-function getNumberOfSentences(){
-    var key, count = 0;
-    for(key in obj.text) {
-        if(obj.text.hasOwnProperty(key)) {
-            count++;
+    /*Write in order the texts' sequence defined in sequence array*/
+    this.loadSequenceSentences = function(){
+        //sequence.length if we want to define a custom sequence
+        if(indexSequence < data.texts[0][currentScreen].length){
+            var caption = that.getSentenceFromId(indexSequence); //sequence[indexSequence]) if custom sequence
+            that.writeSentence(caption);
+            setTimeout(that.eraseSentence, 5000);
+            indexSequence++;
         }
-    }
-    return count;
-}
+        else{
+            indexSequence = 0;
+            that.loadSequenceSentences();
+        }
+    };
 
-function writeSentence(caption) {
-    captionEl.html(caption.substr(0, captionLength++));
-    if(captionLength < caption.length+1) {
-        setTimeout(function(){writeSentence(caption)}, 50);
-    } else {
-        captionLength = 0;
-        caption = '';
-    }
-}
+    this.getSentenceFromId = function(indexSentence){
+        return data.texts[0][currentScreen][indexSentence].sentence.toString();
+    };
 
-function eraseSentence() {
-    caption = captionEl.html();
-    captionLength = caption.length;
-    if (captionLength>0) {
-        erase();
-    }
-}
+    /*Load random sentence from the texts*/
+    this.loadRandomSentence = function(){
+        var indexSentence = that.getRandomSentence();
+        var caption = that.getSentenceFromId(indexSentence);
+        this.writeSentence(caption);
+    };
 
-function erase() {
-    captionEl.html(caption.substr(0, captionLength--));
-    if(captionLength >= 0) {
-        setTimeout('erase()', 30);
-    } else {
-        captionLength = 0;
-        caption = '';
-        setTimeout(setWriteAndEraseSequence, 3000);
-    }
-}
+    this.getRandomSentence = function(){
+        var maxItem = that.getNumberOfSentences();
+        return Math.floor((Math.random() * maxItem));
+    };
 
-function cursorAnimation() {
-    $('#cursor').animate({
-        opacity: 0
-    }, 450).animate({
-        opacity: 1
-    }, 450);
+    this.getNumberOfSentences = function(){ //check this
+        var key, count = 0;
+        for(key in data.text) {
+            if(data.text.hasOwnProperty(key)) {
+                count++;
+            }
+        }
+        return count;
+    };
 
-}
+
+    this.writeSentence = function(caption){
+        captionEl.html(caption.substr(0, captionLength++));
+        if(captionLength < caption.length+1) {
+            setTimeout(function(){that.writeSentence(caption)}, 50);
+        } else {
+            captionLength = 0;
+            caption = '';
+        }
+    };
+
+    this.eraseSentence = function(){
+        caption = captionEl.html();
+        captionLength = caption.length;
+        if (captionLength>0) {
+            that.erase();
+        }
+    };
+
+    this.erase = function(){
+        captionEl.html(caption.substr(0, captionLength--));
+        if(captionLength >= 0) {
+            setTimeout(that.erase, 30);
+        } else {
+            captionLength = 0;
+            caption = '';
+            setTimeout(that.loadSequenceSentences, 3000);
+        }
+    };
+
+    /*Simply animate the cursor*/
+    this.cursorAnimation = function(){
+        $('#cursor').animate({
+            opacity: 0
+        }, 450).animate({
+            opacity: 1
+        }, 450);
+    };
+
+    /*Set the current screen viewed by the user*/
+    this.setCurrentScreen = function(screen){
+        currentScreen = screen;
+    };
+
+
+
+};
+
+/*Launch the robot*/
+var ivolvy = new Ivolvy();
+ivolvy.init();
+
+
+
+
+
+
+
+
+
+
+
