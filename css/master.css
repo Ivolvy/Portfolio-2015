@@ -328,10 +328,10 @@ html, body{
   right: 0;
 }
 .home-page{
-  background: url("../img/background/back-road.jpg") no-repeat center center fixed;
+  /*background: url("../img/background/back-road.jpg") no-repeat center center fixed;*/
   background-size: cover;
-  background-color: #000;
-  color: #FFF;
+  background-color: #f4f3f8;
+  color: #000;
 }
 
 

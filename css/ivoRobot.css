@@ -1,0 +1,29 @@
+
+#ivo-robot {
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    position: absolute;
+    z-index: 10;
+    top: 40px;
+    left: 30px;
+}
+
+#ivo-robot .name{
+    background-color: rgba(211,211,211,1);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+#ivo-robot .speak, #ivo-robot .cursorContainer{
+    background-color: rgba(211,211,211,1);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#cursor {
+    background: #444;
+    width: 5px;
+    height: 17px;
+    display: inline-block;
+    margin-bottom: -2px;
+    margin-left: 6px;
+}

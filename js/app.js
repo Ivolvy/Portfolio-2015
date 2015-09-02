@@ -43,6 +43,12 @@ var flkty = new Flickity( elem, {
     pageDots: false,
     contain: true
 });
+//event when we change the page
+flkty.on( 'settle', function() {
+    console.log( 'Flickity settled at ' + flkty.selectedIndex );
+});
+
+
 
 //GO TO PAGE ON CLICKED MENU'S ELEMENTS
 $('.overlay-menu ul li a').on( 'click', function(event){

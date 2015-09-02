@@ -2,8 +2,8 @@
 var Ivolvy = function() {
     var that = this;
 
-    var captionLength = 0;
-    var caption = '';
+    var sentenceLength = 0;
+    var sentence = '';
     var sequence = ["0","1","2"]; //The order to write the texts
     var indexSequence = 0;
 
@@ -14,10 +14,10 @@ var Ivolvy = function() {
 
     this.init = function(){
         setInterval (that.cursorAnimation, 600);
-        captionEl = $('#caption');
+        textArea = $('.speak');
 
         //setWriteAndEraseSequence();
-        this.loadSequenceSentences();
+        setTimeout(that.loadSequenceSentences, 1500);
     };
 
     this.setWriteAndEraseSequence = function(){
@@ -29,8 +29,8 @@ var Ivolvy = function() {
     this.loadSequenceSentences = function(){
         //sequence.length if we want to define a custom sequence
         if(indexSequence < data.texts[0][currentScreen].length){
-            var caption = that.getSentenceFromId(indexSequence); //sequence[indexSequence]) if custom sequence
-            that.writeSentence(caption);
+            var sentence = that.getSentenceFromId(indexSequence); //sequence[indexSequence]) if custom sequence
+            that.writeSentence(sentence);
             setTimeout(that.eraseSentence, 5000);
             indexSequence++;
         }
@@ -43,12 +43,15 @@ var Ivolvy = function() {
     this.getSentenceFromId = function(indexSentence){
         return data.texts[0][currentScreen][indexSentence].sentence.toString();
     };
+    this.getActionFromId = function(indexSentence){
+        return data.texts[0][currentScreen][indexSentence].action.toString();
+    };
 
     /*Load random sentence from the texts*/
     this.loadRandomSentence = function(){
         var indexSentence = that.getRandomSentence();
-        var caption = that.getSentenceFromId(indexSentence);
-        this.writeSentence(caption);
+        var sentence = that.getSentenceFromId(indexSentence);
+        this.writeSentence(sentence);
     };
 
     this.getRandomSentence = function(){
@@ -67,32 +70,37 @@ var Ivolvy = function() {
     };
 
 
-    this.writeSentence = function(caption){
-        captionEl.html(caption.substr(0, captionLength++));
-        if(captionLength < caption.length+1) {
-            setTimeout(function(){that.writeSentence(caption)}, 50);
+    this.writeSentence = function(sentence){
+        textArea.html(sentence.substr(0, sentenceLength++));
+        if(sentenceLength < sentence.length+1) {
+            setTimeout(function(){that.writeSentence(sentence)}, 50);
         } else {
-            captionLength = 0;
-            caption = '';
+            sentenceLength = 0;
+            sentence = '';
+
+            if(indexSequence == 6){ //put this when we delete the sentence
+                flkty.select(1);
+            }
+
         }
     };
 
     this.eraseSentence = function(){
-        caption = captionEl.html();
-        captionLength = caption.length;
-        if (captionLength>0) {
+        sentence = textArea.html();
+        sentenceLength = sentence.length;
+        if (sentenceLength>0) {
             that.erase();
         }
     };
 
     this.erase = function(){
-        captionEl.html(caption.substr(0, captionLength--));
-        if(captionLength >= 0) {
+        textArea.html(sentence.substr(0, sentenceLength--));
+        if(sentenceLength >= 0) {
             setTimeout(that.erase, 30);
         } else {
-            captionLength = 0;
-            caption = '';
-            setTimeout(that.loadSequenceSentences, 3000);
+            sentenceLength = 0;
+            sentence = '';
+            setTimeout(that.loadSequenceSentences, 1000);
         }
     };
 
