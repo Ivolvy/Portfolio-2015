@@ -6,6 +6,7 @@ var Ivolvy = function() {
     var sentence = '';
     var sequence = ["0","1","2"]; //The order to write the texts
     var indexSequence = 0;
+    var previousIndexSequence = -1;
 
     var currentScreen = 'home';
 
@@ -17,8 +18,9 @@ var Ivolvy = function() {
         textArea = $('.speak');
 
         //setWriteAndEraseSequence();
-        setTimeout(that.loadSequenceSentences, 1500);
+        setTimeout(that.loadSequenceSentences('home'), 1500);
     };
+
 
     this.setWriteAndEraseSequence = function(){
         that.loadRandomSentence();
@@ -27,11 +29,15 @@ var Ivolvy = function() {
 
     /*Write in order the texts' sequence defined in sequence array*/
     this.loadSequenceSentences = function(){
+        if(indexSequence == previousIndexSequence){
+            indexSequence++;
+        }
         //sequence.length if we want to define a custom sequence
         if(indexSequence < data.texts[0][currentScreen].length){
             var sentence = that.getSentenceFromId(indexSequence); //sequence[indexSequence]) if custom sequence
             that.writeSentence(sentence);
             setTimeout(that.eraseSentence, 5000);
+            previousIndexSequence = indexSequence;
             indexSequence++;
         }
         else{
@@ -59,6 +65,7 @@ var Ivolvy = function() {
         return Math.floor((Math.random() * maxItem));
     };
 
+    /*Get the maximum index for the sentences*/
     this.getNumberOfSentences = function(){ //check this
         var key, count = 0;
         for(key in data.text) {
@@ -69,7 +76,6 @@ var Ivolvy = function() {
         return count;
     };
 
-
     this.writeSentence = function(sentence){
         textArea.html(sentence.substr(0, sentenceLength++));
         if(sentenceLength < sentence.length+1) {
@@ -77,11 +83,6 @@ var Ivolvy = function() {
         } else {
             sentenceLength = 0;
             sentence = '';
-
-            if(indexSequence == 6){ //put this when we delete the sentence
-                flkty.select(1);
-            }
-
         }
     };
 
@@ -94,6 +95,7 @@ var Ivolvy = function() {
     };
 
     this.erase = function(){
+        that.checkScreenChange();
         textArea.html(sentence.substr(0, sentenceLength--));
         if(sentenceLength >= 0) {
             setTimeout(that.erase, 30);
@@ -101,6 +103,13 @@ var Ivolvy = function() {
             sentenceLength = 0;
             sentence = '';
             setTimeout(that.loadSequenceSentences, 1000);
+        }
+    };
+
+    /*Change the screen according to the index*/
+    this.checkScreenChange = function(){
+        if(indexSequence == 6){
+            flkty.select(1);
         }
     };
 
@@ -116,9 +125,8 @@ var Ivolvy = function() {
     /*Set the current screen viewed by the user*/
     this.setCurrentScreen = function(screen){
         currentScreen = screen;
+        indexSequence = 0;
     };
-
-
 
 };
 

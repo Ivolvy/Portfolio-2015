@@ -341,17 +341,21 @@ html, body{
 #introduction-page{
   overflow: auto;
   background: #f4f3f8;
-  padding-bottom: 200px;
 }
 #introduction-page .title{
   text-align: center;
   font-size: 50px;
   padding: 100px;
 }
-#introduction-page .container{
-  width: 1200px;
-  margin: auto;
+#projects-presentation{
+    height: 100%;
 }
+#introduction-page #projects-container{
+    width: 1200px;
+    margin: auto;
+    padding-top: 200px;
+}
+
 #introduction-page article{
   background-position: top center;
   background-repeat: repeat-y;
@@ -359,11 +363,9 @@ html, body{
 }
 
 #introduction-page article.first{
-  margin-top: 800px;
-  text-align: right;
-  padding-right: 50px;
+    text-align: right;
+    padding-right: 50px;
 }
-
 #introduction-page article.second{
   padding-top: 150px;
   text-align: left;
@@ -385,6 +387,21 @@ html, body{
   margin-bottom: 25px;
 }
 
+.arrow-down{
+    width: 50px;
+    margin: auto;
+    bottom: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.arrow-down path{
+    fill: #000;
+}
+.arrow-down svg{
+    width: 100%;
+    height: 100%;
+}
 
 /*----------------------------------------------*/
 /*------------CONTACT PAGE VIEW------------*/
