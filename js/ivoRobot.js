@@ -7,6 +7,7 @@ var Ivolvy = function() {
     var sequence = ["0","1","2"]; //The order to write the texts
     var indexSequence = 0;
     var previousIndexSequence = -1;
+    var textArea;
 
     var currentScreen = 'home';
 
