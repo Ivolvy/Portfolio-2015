@@ -209,11 +209,12 @@ html, body{
 
 .overlay {
   position: fixed;
-  background: #cf2949;
+  /*background: #cf2949;*/
+  background: #c2c2c2;
   top: 0;
   left: 0;
   width: 100%;
-  height: 0%;
+  height: 0;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .35s, visibility .35s, height .35s;
@@ -244,7 +245,7 @@ html, body{
 
 .hide {
   text-indent: -998em;
-  height: 0px;
+  height: 0;
 }
 
 .hide {
@@ -315,7 +316,7 @@ html, body{
 /*----------------HOME PAGE VIEW----------------*/
 /*----------------------------------------------*/
 
-#presentation{
+.description{
   width: 400px;
   margin: auto;
   text-align: center;
@@ -330,8 +331,22 @@ html, body{
 .home-page{
   /*background: url("../img/background/back-road.jpg") no-repeat center center fixed;*/
   background-size: cover;
-  background-color: #f4f3f8;
-  color: #000;
+  /*background-color: #f4f3f8;
+  color: #000;*/
+    background-color: #1D262E;
+    color: #FFF;
+}
+
+.quote{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 13%;
+    text-align: center;
+    font-size: 93%;
+    line-height: 1.28;
+    color: #fff;
+    z-index: 4;
 }
 
 
@@ -340,7 +355,9 @@ html, body{
 /*----------------------------------------------*/
 #introduction-page{
   overflow: auto;
-  background: #f4f3f8;
+  /*background: #f4f3f8;*/
+    background-color: #1D262E;
+    color: #FFF;
   padding-bottom: 200px;
 }
 #introduction-page .title{
@@ -352,6 +369,19 @@ html, body{
   width: 1200px;
   margin: auto;
 }
+
+.scroll-btn{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 13%;
+    text-align: center;
+    font-size: 93%;
+    line-height: 1.28;
+    color: #fff;
+    z-index: 4;
+}
+
 #introduction-page article{
   background-position: top center;
   background-repeat: repeat-y;
@@ -362,6 +392,7 @@ html, body{
   margin-top: 800px;
   text-align: right;
   padding-right: 50px;
+    padding-top: 50px;
 }
 
 #introduction-page article.second{
@@ -383,6 +414,27 @@ html, body{
 .article-title {
   font-size: 35px;
   margin-bottom: 25px;
+}
+
+/**PROJECTS**/
+
+.oveWebsite{
+    width: 495px;
+}
+.oveMobile{
+    width: 235px;
+}
+
+.blackHole{
+    width: 495px;
+}
+
+.unityGame{
+    width: 495px;
+}
+
+.drawMe{
+    width: 495px;
 }
 
 

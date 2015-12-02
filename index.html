@@ -18,6 +18,7 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/contactForm.css" rel="stylesheet">
     <link href="css/ivoRobot.css" rel="stylesheet">
+    <link href="css/scrollDown.css" rel="stylesheet">
 
 </head>
 
@@ -42,10 +43,10 @@
                 <h2 class="hide">Main navigation</h2>
                 <ul>
                     <li><a data-slideToGo="0">Home</a></li>
-                    <li><a data-slideToGo="1">Who?</a></li>
-                    <li><a data-slideToGo="2">What?</a></li>
-                    <li><a data-slideToGo="3">Projects</a></li>
-                    <li><a data-slideToGo="4">Contact</a></li>
+                    <li><a data-slideToGo="1">Projects</a></li>
+                    <li><a data-slideToGo="2">Get in touch!</a></li>
+                   <!-- <li><a data-slideToGo="3">Projects</a></li>
+                    <li><a data-slideToGo="4">a</a></li>-->
                 </ul>
             </nav>
         </div>
@@ -58,37 +59,54 @@
 
      <div class="website-gallery">
             <div class="gallery-cell home-page">
-                <section id="presentation">
-                    <h1>LOREM IPSUM</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante augue, dapibus a metus vitae,
-                        gravida placerat eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ipsum sit amet
-                        dolor tempus, eu porttitor odio tincidunt. Sed eu dapibus metus, posuere elementum velit. Quisque tempus
-                        varius rutrum.
+                <section id="presentation" class="description">
+                    <h1>Michael Genty</h1>
+                    <p>Hi! I'm a 22 years old developer from Annecy, a beautiful town!
+                        And I'm a second year <a title="Concepteur Réalisateur Multimedia">CRM</a> student at Gobelins, l'école de l'image.
                     </p>
+                    <p>Oh! I also love photos, music and sport</p>
                 </section>
+
+                <div class="quote">Whether you think you can, or you think you can't, you're right</div>
             </div>
             <div id="introduction-page" class="gallery-cell">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="title">BIG PAGE'S TITLE</div>
+                            <div class="title">Projects</div>
                         </div>
+                        <section class="description">
+                            <p>Here you can find some projects I realized at school or for myself.
+                                Scroll down to continue
+                            </p>
+                        </section>
+                          <span class="scroll-btn">
+                            <a href="#scrolled">
+                                <span class="mouse">
+                                    <span>
+                                    </span>
+                                </span>
+                            </a>
+                          <p>scroll me</p>
+                        </span>
                     </div>
 
-                    <article class="first">
+                    <article id="scrolled" class="first">
                         <div class="row">
                             <div class="description col-md-6">
-                                <div class="article-title">Section 1 title</div>
+                                <div class="article-title">OVE - Ouvrez votre esprit</div>
+                                <div class="specs">HTML5 - Cordova</div>
                                 <div class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante augue, dapibus a metus vitae,
-                                    gravida placerat eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ipsum sit amet
-                                    dolor tempus, eu porttitor odio tincidunt. Sed eu dapibus metus, posuere elementum velit. Quisque tempus
-                                    varius rutrum.
+                                    OVE is a first year school project at Gobelins, in a two-person team. I was charged to develop
+                                    the mobile application and the website.
+                                    The goal of this experimental project was to open the mind of the people on the world around them.
                                 </div>
+
+                                <div class="linkButton">Visit project website</div>
                             </div>
                             <div class="col-md-6">
-                                <img class="image wow slideInRight" src="img/flower.jpg"/>
-                                <img class="image wow slideInRight" data-wow-duration="2s" style="margin-top: -150px;margin-left: 180px;" src="img/flower.jpg"/>
+                                <img class="image wow slideInRight oveWebsite" src="img/ove/ove-website.png"/>
+                                <img class="image wow slideInRight oveMobile" data-wow-duration="2s" style="margin-top: -200px;margin-left: 180px;" src="img/ove/ove-mobile.png"/>
                             </div>
                         </div>
                     </article>
@@ -96,15 +114,14 @@
                     <article class="second">
                         <div class="row">
                             <div class="col-md-6">
-                                <img class="image" src="img/flower.jpg"/>
+                                <img class="image blackHole" src="img/pong/black-hole.png"/>
                             </div>
                             <div class="description col-md-6 wow slideInRight">
-                                <div class="article-title">Section 2 title</div>
-                                <div class="text ">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante augue, dapibus a metus vitae,
-                                    gravida placerat eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ipsum sit amet
-                                    dolor tempus, eu porttitor odio tincidunt. Sed eu dapibus metus, posuere elementum velit. Quisque tempus
-                                    varius rutrum.
+                                <div class="article-title">Mobile pong game</div>
+                                <div class="specs">HTML5 - Cordova  - Pixi.js</div>
+                                <div class="text">
+                                    Original isn't it? In this mobile pong game, two players can compete on the same device, until finger cramps!
+                                    Some obstacles and bonus are implemented, like black holes, walls and multi balls.
                                 </div>
                             </div>
                         </div>
@@ -113,16 +130,18 @@
                     <article class="third">
                         <div class="row">
                             <div class="description col-md-6 wow slideInLeft">
-                                <div class="article-title">Section 3 title</div>
+                                <div class="article-title">Unity 2D game</div>
+                                <div class="specs">Unity - C#</div>
                                 <div class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante augue, dapibus a metus vitae,
-                                    gravida placerat eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ipsum sit amet
-                                    dolor tempus, eu porttitor odio tincidunt. Sed eu dapibus metus, posuere elementum velit. Quisque tempus
-                                    varius rutrum.
+                                    Here it is, a Unity 2D game! Want to play? If I have an advice for you, try to collect the for gems in the level, you
+                                    will be surprised!
+                                    Use arrows keys to move and space key to jump.
                                 </div>
+
+                                <div class="linkButton">Play the game</div>
                             </div>
                             <div class="col-md-6">
-                                <img class="image" src="img/flower.jpg"/>
+                                <img class="image unityGame" src="img/unity/unityGame.png"/>
                             </div>
                         </div>
                     </article>
@@ -130,15 +149,15 @@
                     <article class="fourth">
                         <div class="row">
                             <div class="col-md-6">
-                                <img class="image" src="img/flower.jpg"/>
+                                <img class="image drawMe" src="img/drawMe/drawMe.png"/>
                             </div>
                             <div class="description col-md-6 wow slideInRight">
-                                <div class="article-title">Section 3 title</div>
+                                <div class="article-title">DrawMe</div>
+                                <div class="specs">HTML5</div>
                                 <div class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante augue, dapibus a metus vitae,
-                                    gravida placerat eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis ipsum sit amet
-                                    dolor tempus, eu porttitor odio tincidunt. Sed eu dapibus metus, posuere elementum velit. Quisque tempus
-                                    varius rutrum.
+                                    DrawMe was developed from a topic proposed by the FrenchTech.
+                                    The subject was to connect two city together in an original way.
+                                    A user makes a pose while the second drew around him, via webcam , with some colored objects.
                                 </div>
                             </div>
                         </div>
@@ -150,7 +169,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="title">BIG PAGE'S TITLE</div>
+                            <div class="title">Just say me 'hello'</div>
                         </div>
                         <section id="contact-form">
                             <div class="row">
@@ -186,7 +205,7 @@
                 </div>
             </div>
 
-                 <div id="project-page" class="gallery-cell" >
+             <!--    <div id="project-page" class="gallery-cell" >
                      <div class="container">
                          <div class="row">
                              <div class="col-md-12">
@@ -194,7 +213,7 @@
                              </div>
                          </div>
                      </div>
-                 </div>
+                 </div>-->
 
      </div>
 
@@ -206,7 +225,7 @@
 <script src="vendor/wow.js"></script>
 <script src="vendor/jquery-2.1.4.js"></script>
 <script src="js/robotTexts.js"></script>
-<script src="js/ivoRobot.js"></script>
+<!--<script src="js/ivoRobot.js"></script>-->
 <script src="js/app.js"></script>
 
 <script>
