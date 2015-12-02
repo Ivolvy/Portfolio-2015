@@ -28,7 +28,6 @@ var data = {
                         "sentence": "Ok user, see you in the next page!"
                     }
                 ],
-
                 "projects": [
                     {
                         "index": "1",
@@ -42,7 +41,21 @@ var data = {
                         "index": "3",
                         "sentence": "Project page3"
                     }
-                 ]
+                 ],
+                "contact": [
+                    {
+                        "index": "1",
+                        "sentence": "Contact page1"
+                    },
+                    {
+                        "index": "2",
+                        "sentence": "Contact page2"
+                    },
+                    {
+                        "index": "3",
+                        "sentence": "Contact page3"
+                    }
+                ]
             }
         ]
     };
