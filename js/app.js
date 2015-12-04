@@ -80,3 +80,16 @@ $(function() {
 particlesJS.load('particles-js', 'assets/particles.json', function() {
     //console.log('callback - particles.js config loaded');
 });
+
+
+//MESSAGE FORM SUBMIT
+$(document).on('submit', '#contact-form', function(){
+    $.post('contact.php', $(this).serialize())
+        .done(function(data){
+            alert('mail sended');
+        })
+        .fail(function(){
+            alert('fail');
+        });
+    return false;
+});

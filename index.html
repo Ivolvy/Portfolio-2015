@@ -178,11 +178,11 @@
                         <div class="col-md-12">
                             <div class="title">Just say me 'hello'</div>
                         </div>
-                        <section id="contact-form">
+                        <form id="contact-form" method="post" name="form">
                             <div class="row">
                                 <div class="col-md-6">
                                     <span class="input input--haruki">
-                                        <input class="input__field input__field--haruki" type="text" id="input-1" />
+                                        <input class="input__field input__field--haruki" type="text" id="input-1" name="name"/>
                                         <label class="input__label input__label--haruki" for="input-1">
                                             <span class="input__label-content input__label-content--haruki">Your Name</span>
                                         </label>
@@ -190,7 +190,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <span class="input input--haruki">
-                                        <input class="input__field input__field--haruki" type="text" id="input-2" />
+                                        <input class="input__field input__field--haruki" type="text" id="input-2" name="email"/>
                                         <label class="input__label input__label--haruki" for="input-2">
                                             <span class="input__label-content input__label-content--haruki">Your e-mail</span>
                                         </label>
@@ -200,14 +200,15 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <span id="message-input" class="input input--haruki">
-                                        <textarea class="input__field input__field--haruki" type="text" id="input-3"></textarea>
+                                        <textarea class="input__field input__field--haruki" type="text" id="input-3" name="message"></textarea>
                                         <label class="input__label input__label--haruki" for="input-3">
                                             <span class="input__label-content input__label-content--haruki">Your message</span>
                                         </label>
                                     </span>
                                 </div>
                             </div>
-                        </section>
+                            <input id="send" name="submit" type="submit" value="Send Message">
+                        </form>
                     </div>
                 </div>
             </div>
