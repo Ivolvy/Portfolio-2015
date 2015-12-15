@@ -17,8 +17,14 @@ html, body {
     z-index: 10;
 }
 
-.description, .quote{
-    z-index: 20;
+
+
+#particles-js{
+    z-index: 30;
+    width:100%;
+    height:100%;
+    position: absolute;
+    opacity: 0.7;
 }
 
 /*----------------------------------------------*/
@@ -377,13 +383,14 @@ html, body {
 
 .quote {
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     bottom: 13%;
     text-align: center;
     font-size: 93%;
     line-height: 1.28;
     color: #fff;
+    z-index: 50;
 }
 
 /*----------------------------------------------*/
@@ -406,6 +413,10 @@ html, body {
 #introduction-page .container {
     width: 1200px;
     margin: auto;
+}
+
+#presentation{
+    z-index: 50;
 }
 
 .scroll-btn {
@@ -445,9 +456,21 @@ html, body {
     padding-left: 50px;
 }
 
+#introduction-page .description{
+    text-align: left;
+}
+
+.specs{
+    color: #fccc1d;
+}
+
 .article-title {
     font-size: 35px;
-    margin-bottom: 25px;
+    color: #6DD6C3;
+}
+
+.text {
+    margin-top: 20px;
 }
 
 /**PROJECTS**/
@@ -490,7 +513,7 @@ html, body {
     left: 50%;
     width: 4px;
     height: 100%;
-    background: #1086AD;
+    background: #6DD680;
 }
 
 
