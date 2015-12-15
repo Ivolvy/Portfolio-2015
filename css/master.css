@@ -373,7 +373,7 @@ html, body {
 }
 
 .home-page {
-    background: url("../img/background/back-road.jpg") no-repeat center center fixed;
+    background: url("../img/background/DSC_0228.jpg") no-repeat center center fixed;
     background-size: cover;
     /*background-color: #f4f3f8;
     color: #000;*/
@@ -534,4 +534,13 @@ html, body {
 #contact-page #message-input textarea,
 #contact-page #message-input label {
     height: 150px;
+}
+
+#send{
+    width: 220px;
+    height: 50px;
+    background-color: #6DD6C3;
+    color: #fff;
+    font-size: 19px;
+    border: none;
 }
