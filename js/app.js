@@ -26,22 +26,16 @@ function onInputBlur( ev ) {
 }
 /*END OF FORM CONTACT's ANIMATIONS*/
 
-//USED FOR THE HAMB MENU
-$(document).ready(function(){
-    $('#hamb-menu').click(function(){
-        $(this).toggleClass('open');
-        $('.overlay').toggleClass('open');
-    });
-});
+
 
 //INITIALIZE FLICKITY
 var elem = document.querySelector('.website-gallery');
 var flkty = new Flickity( elem, {
     // options
     wrapAround: false,
-    prevNextButtons: true,
+    prevNextButtons: false,
     pageDots: false,
-    contain: true
+    contain: false
 });
 //event when we change the page
 flkty.on( 'settle', function() {
@@ -92,4 +86,14 @@ $(document).on('submit', '#contact-form', function(){
             alert('fail');
         });
     return false;
+});
+
+
+
+$(document).ready(function(){
+    //USED FOR THE HAMB MENU
+    $('#hamb-menu').click(function(){
+        $(this).toggleClass('open');
+        $('.overlay').toggleClass('open');
+    });
 });
