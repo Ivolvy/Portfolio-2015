@@ -73,6 +73,9 @@
                 <div class="quote">Whether you think you can, or you think you can't, you're right</div>
             </div>
             <div id="introduction-page" class="gallery-cell">
+
+                <div id="introduction-background" style=""></div>
+                <div class="background-color"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -235,11 +238,13 @@
 <script src="js/robotTexts.js"></script>
 <!--<script src="js/ivoRobot.js"></script>-->
 <script src="vendor/particles.min.js"></script>
+<script src="vendor/backstretch.js"></script>
 <script src="js/app.js"></script>
 
 <script>
     $(window).load(function(){
         $('body').toggleClass('loaded');
+        $("#introduction-background").backstretch("img/background/back-sun.jpg");
     });
 </script>
 
