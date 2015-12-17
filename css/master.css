@@ -9,6 +9,10 @@ html, body {
     font-family: "Lato", sans-serif;
 }
 
+.overlay-menu a{
+    cursor: pointer;
+}
+
 .background-color {
     background-color: rgba(29,38,46,0.7);
     height: 100%;
@@ -16,13 +20,19 @@ html, body {
     position: absolute;
 }
 
-
 #particles-js{
     z-index: 30;
     width:100%;
     height:100%;
     position: absolute;
     opacity: 0.7;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+    cursor: auto!important;
+}
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+    /*cursor: grabbing!important;*/
 }
 
 /*----------------------------------------------*/
@@ -416,7 +426,7 @@ html, body {
     /*background: #f4f3f8;*/
     background-color: #1D262E;
     color: #FFF;
-    padding-bottom: 200px;
+    /*padding-bottom: 200px;*/
 }
 
 #introduction-background{
@@ -430,8 +440,11 @@ html, body {
 }
 
 #introduction-page .container {
-    width: 1200px;
-    margin: auto;
+    /*width: 1200px;*/
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #presentation{
@@ -451,28 +464,28 @@ html, body {
 }
 
 #introduction-page article.first {
-    margin-top: 800px;
+    /*margin-top: 800px;*/
     text-align: right;
-    padding-right: 50px;
+    /*padding-right: 50px;*/
     padding-top: 50px;
 }
 
 #introduction-page article.second {
     padding-top: 150px;
     text-align: left;
-    padding-left: 50px;
+    /*padding-left: 50px;*/
 }
 
 #introduction-page article.third {
     padding-top: 150px;
     text-align: right;
-    padding-right: 50px;
+    /*padding-right: 50px;*/
 }
 
 #introduction-page article.fourth {
     padding-top: 150px;
     text-align: left;
-    padding-left: 50px;
+    /*padding-left: 50px;*/
 }
 
 #introduction-page .description{
@@ -495,25 +508,52 @@ html, body {
 /**PROJECTS**/
 
 .oveWebsite {
-    width: 495px;
+    /*width: 495px;*/
+    width: 100%;
+    margin-left: 35px;
 }
 
 .oveMobile {
-    width: 235px;
+    /*width: 235px;*/
+    width: 100%;
 }
 
 .blackHole {
-    width: 495px;
+    /*width: 495px;*/
+    width: 100%;
+    margin-right: 35px;
+    float: right;
 }
 
 .unityGame {
-    width: 495px;
+    /*width: 495px;*/
+    width: 100%;
+    margin-left: 35px;
 }
 
 .drawMe {
-    width: 495px;
+    /*width: 495px;*/
+    width: 100%;
+    margin-right: 35px;
+    float: right;
 }
 
+.first .text-project{
+    padding-right: 20px;
+}
+.second .text-project{
+    padding-left: 30px;
+}
+.third .text-project{
+    padding-right: 20px;
+}
+.fourth .text-project{
+    padding-left: 30px;
+}
+
+.image-mobile{
+    display: none;
+}
 
 /*----------------------------------------------*/
 /*-------------------TIMELINE-------------------*/
@@ -521,6 +561,7 @@ html, body {
 
 .timeline {
     position: relative;
+    margin-bottom: 200px
 }
 
 .timeline-line {
@@ -562,4 +603,49 @@ html, body {
     color: #fff;
     font-size: 19px;
     border: none;
+}
+
+
+#top-pres{
+    height:100%;
+    width:100%;
+    margin-bottom: 200px;
+}
+
+/*----------------------------------------------*/
+/*----------------RESPONSIVITY------------------*/
+/*----------------------------------------------*/
+
+@media (max-width: 767px) {
+    .timeline article {
+        padding: 0!important;
+    }
+    .timeline-line{
+        background: none;
+    }
+    .text-project{
+        margin: 0 0 100px;
+        padding: 0!important;
+    }
+    .description-timeline{
+        text-align: left;
+    }
+    .timeline .image{
+        display: none;
+    }
+    .timeline .image{
+        padding:0;
+        margin:0;
+    }
+    .container{
+        max-width: none!important;
+    }
+    .image-mobile{
+        display: block!important;
+        padding: 30px 0;
+        margin: 0;
+    }
+    #particles-js{
+        display: none;
+    }
 }

@@ -39,7 +39,7 @@ var flkty = new Flickity( elem, {
 });
 //event when we change the page
 flkty.on( 'settle', function() {
-    console.log( 'Flickity settled at ' + flkty.selectedIndex );
+   // console.log( 'Flickity settled at ' + flkty.selectedIndex );
 });
 
 
