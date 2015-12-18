@@ -603,8 +603,11 @@ html, body {
     color: #fff;
     font-size: 19px;
     border: none;
+    margin-left: 15px;
 }
-
+.send-container{
+    width:100%;
+}
 
 #top-pres{
     height:100%;
@@ -647,5 +650,8 @@ html, body {
     }
     #particles-js{
         display: none;
+    }
+    .send-container{
+        text-align: center;
     }
 }
