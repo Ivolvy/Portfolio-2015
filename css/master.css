@@ -35,6 +35,18 @@ html, body {
     /*cursor: grabbing!important;*/
 }
 
+.top-logo{
+    width: 100%;
+    text-align: center;
+}
+.logo-m{
+    margin-bottom: 25px;
+    position: absolute;
+    top: 25px;
+    z-index: 10;
+    margin-left: -25px;
+}
+
 /*----------------------------------------------*/
 /*-----------------LOADER SCREEN----------------*/
 /*----------------------------------------------*/
