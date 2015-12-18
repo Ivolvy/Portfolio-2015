@@ -426,6 +426,7 @@ html, body {
     /*background: #f4f3f8;*/
     background-color: #1D262E;
     color: #FFF;
+    overflow-x: hidden;
     /*padding-bottom: 200px;*/
 }
 
@@ -583,6 +584,7 @@ html, body {
 
 #contact-page {
     background: #f4f3f8;
+    overflow: auto;
 }
 
 #contact-page .title {
