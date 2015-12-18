@@ -96,4 +96,16 @@ $(document).ready(function(){
         $(this).toggleClass('open');
         $('.overlay').toggleClass('open');
     });
+
+    bindProjectsButtons();
 });
+
+
+function bindProjectsButtons(){
+    $('.oveWebsite .linkButton').on('click', function(){
+        window.open('http://michaelgenty.com/OVE-website/', '_blank');
+    });
+     $('.unityGame .linkButton').on('click', function(){
+        window.open('', '_blank');
+    });
+}
