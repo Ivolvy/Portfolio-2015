@@ -1,12 +1,15 @@
 <?php
 
-
-if(isset($_POST["submit"])){
-    // Checking For Blank Fields..
+    //checking for blank fields
     if($_POST["name"]==""||$_POST["email"]==""||$_POST["message"]==""){
-        echo "Fill All Fields..";
+        $result = array(
+            'success'=>'false',
+            'msg'=>"FILL ALL FIELDS.."
+        );
+        echo json_encode($result);
+        die;
     }
-}else{
+
     // Check if the "Sender's Email" input field is filled out
     $email2=$_POST['email'];
     // Sanitize E-mail Address
@@ -20,7 +23,12 @@ if(isset($_POST["submit"])){
     $headers = 'headers';
 
     if (!$email2){
-        echo "Invalid Sender's Email";
+        $result = array(
+            'success'=>'false',
+            'msg'=>"INVALID SENDER'S EMAIL"
+        );
+        echo json_encode($result);
+        die;
     }
     else{
         $message = $_POST['message'];
@@ -30,9 +38,12 @@ if(isset($_POST["submit"])){
         $message = wordwrap($message, 70);
         // Send Mail By PHP Mail Function
         mail($to, $subject, $message, $headers);
-        echo "Your mail has been sent successfuly ! Thank you for your feedback";
+
+        $result = array(
+            'success'=>'true'
+        );
+        echo json_encode($result);
+        die;
+        //echo "Your mail has been sent successfuly ! Thank you for your feedback";
     }
-}
-
-
 ?>

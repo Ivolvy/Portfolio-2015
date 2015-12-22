@@ -288,7 +288,7 @@ html, body {
 .overlay nav {
     position: relative;
     height: 70%;
-    top: 50%;
+    top: 61%;  /*50% original*/
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -380,7 +380,7 @@ html, body {
 /*----------------------------------------------*/
 
 .description {
-    width: 400px;
+    width: 430px;
     margin: auto;
     text-align: center;
     vertical-align: middle;
@@ -390,6 +390,11 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
+    font-size: 18px;
+}
+
+.introduction{
+    height: 60px;
 }
 
 .home-page {
@@ -468,7 +473,7 @@ html, body {
     position: absolute;
     left: 0px;
     right: 0px;
-    bottom: 13%;
+    bottom: 55px;
     text-align: center;
     font-size: 93%;
     line-height: 1.28;
@@ -501,9 +506,6 @@ html, body {
     /*padding-left: 50px;*/
 }
 
-#introduction-page .description{
-    text-align: left;
-}
 
 .link-container{
     width: 100%;

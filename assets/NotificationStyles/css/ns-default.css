@@ -11,6 +11,10 @@
 	font-size: 90%;
 }
 
+.ns-type-error{
+	background-color: rgba(231,76,60,0.95);
+}
+
 .ns-box.ns-show {
 	pointer-events: auto;
 }

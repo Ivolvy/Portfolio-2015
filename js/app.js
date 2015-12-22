@@ -80,12 +80,41 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
 $(document).on('submit', '#contact-form', function(){
     $.post('contact.php', $(this).serialize())
         .done(function(data){
-            alert('mail sended');
+console.log(data);
+            var results = JSON.parse(data);
+
+            if(results['success'] == "true"){
+                var notification = new NotificationFx({
+                    message : '<p style="display:inline-block;margin-left:10px">MAIL SENDED!</p>',
+                    layout : 'growl',
+                    effect : 'slide',
+                    type : 'notice' // notice, warning or error
+                });
+            }
+            else{
+                var notification = new NotificationFx({
+                    message : '<p style="display:inline-block;margin-left:10px">'+results['msg']+'</p>',
+                    layout : 'growl',
+                    effect : 'slide',
+                    type : 'error' // notice, warning or error
+                });
+            }
+
+            // show the notification
+            notification.show();
         })
-        .fail(function(){
-            alert('fail');
+        .error(function(){
+            var notification = new NotificationFx({
+                message : '<p style="display:inline-block;margin-left:10px">FAIL</p>',
+                layout : 'growl',
+                effect : 'slide',
+                type : 'error' // notice, warning or error
+            });
+            // show the notification
+            notification.show();
         });
     return false;
+
 });
 
 
@@ -100,7 +129,7 @@ $(document).ready(function(){
     bindProjectsButtons();
 });
 
-
+//
 function bindProjectsButtons(){
     $('.oveWebsite .linkButton').on('click', function(){
         window.open('http://michaelgenty.com/OVE-website/', '_blank');
@@ -109,3 +138,10 @@ function bindProjectsButtons(){
         window.open('', '_blank');
     });
 }
+
+
+var mouseDrag = true; //check custom in flickity.pkgd.js for custom code
+//disable mouse drag if we are on phone or tablet
+window.addEventListener('resize', function(event){
+    mouseDrag = $(window).width() >= 767;
+});
