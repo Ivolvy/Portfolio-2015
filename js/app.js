@@ -1,7 +1,28 @@
 
 //CSS ANIMATIONS ON SCROLL
-//modify scrollContainer in WOW.prototype.defaults to change the container selector
-new WOW().init();
+var controller = new ScrollMagic.Controller();
+
+// build scene
+new ScrollMagic.Scene({triggerElement: ".first"})
+    // trigger animation by adding a css class
+    .setClassToggle(".anim1", "slideInLeft")
+    //.addIndicators({name: "1 - add a class"}) // add indicators (requires plugin)
+    .triggerHook(0.79)
+    .addTo(controller);
+new ScrollMagic.Scene({triggerElement: ".second"})
+    .setClassToggle(".anim2", "slideInRight")
+    .triggerHook(0.67)
+    .addTo(controller);
+new ScrollMagic.Scene({triggerElement: ".third"})
+    .setClassToggle(".anim3", "slideInLeft")
+    .triggerHook(0.67)
+    .addTo(controller);
+new ScrollMagic.Scene({triggerElement: ".fourth"})
+    .setClassToggle(".anim4", "slideInRight")
+    .triggerHook(0.67)
+    .addTo(controller);
+
+
 
 // USED FOR THE FORM CONTACT'S ANIMATIONS
 [].slice.call( document.querySelectorAll( '.input__field' ) ).forEach( function( inputEl ) {
@@ -80,7 +101,7 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
 $(document).on('submit', '#contact-form', function(){
     $.post('contact.php', $(this).serialize())
         .done(function(data){
-console.log(data);
+
             var results = JSON.parse(data);
 
             if(results['success'] == "true"){

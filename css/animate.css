@@ -3077,12 +3077,13 @@ Copyright (c) 2015 Daniel Eden
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    visibility: visible;
   }
 }
 
 .slideInLeft {
-  -webkit-animation-name: slideInLeft;
-  animation-name: slideInLeft;
+  -webkit-animation-name: slideInLeft!important;
+  animation-name: slideInLeft!important;
 }
 
 @-webkit-keyframes slideInRight {
@@ -3095,6 +3096,7 @@ Copyright (c) 2015 Daniel Eden
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    visibility: visible;
   }
 }
 
@@ -3108,12 +3110,13 @@ Copyright (c) 2015 Daniel Eden
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    visibility: visible;
   }
 }
 
 .slideInRight {
-  -webkit-animation-name: slideInRight;
-  animation-name: slideInRight;
+  -webkit-animation-name: slideInRight!important;
+  animation-name: slideInRight!important;
 }
 
 @-webkit-keyframes slideInUp {
@@ -3186,8 +3189,8 @@ Copyright (c) 2015 Daniel Eden
 
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-150%, 0, 0);
+    transform: translate3d(-150%, 0, 0);
   }
 }
 
@@ -3199,8 +3202,8 @@ Copyright (c) 2015 Daniel Eden
 
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-150%, 0, 0);
+    transform: translate3d(-150%, 0, 0);
   }
 }
 
@@ -3217,8 +3220,8 @@ Copyright (c) 2015 Daniel Eden
 
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(150%, 0, 0);
+    transform: translate3d(150%, 0, 0);
   }
 }
 
@@ -3230,8 +3233,8 @@ Copyright (c) 2015 Daniel Eden
 
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(150%, 0, 0);
+    transform: translate3d(150%, 0, 0);
   }
 }
 
