@@ -1,4 +1,6 @@
 
+var mouseDrag = true; //check custom in flickity.pkgd.js for custom code
+
 //CSS ANIMATIONS ON SCROLL
 var controller = new ScrollMagic.Controller();
 
@@ -147,6 +149,9 @@ $(document).ready(function(){
         $('.overlay').toggleClass('open');
     });
 
+    //disable mouse drag if we are on phone or tablet
+    mouseDrag = $(window).width() >= 767;
+
     bindProjectsButtons();
 });
 
@@ -161,7 +166,6 @@ function bindProjectsButtons(){
 }
 
 
-var mouseDrag = true; //check custom in flickity.pkgd.js for custom code
 //disable mouse drag if we are on phone or tablet
 window.addEventListener('resize', function(event){
     mouseDrag = $(window).width() >= 767;
