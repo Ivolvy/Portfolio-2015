@@ -524,6 +524,13 @@ html, body {
     margin-top: 42px;
 }
 
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
 .specs{
     color: #fccc1d;
 }
@@ -561,6 +568,13 @@ html, body {
     /*width: 495px;*/
     width: 100%;
     margin-left: 35px;
+}
+
+.itycom .image-mobile, .itycom .image{
+    /*width: 495px;*/
+    width: 100%;
+    margin-right: 35px;
+    float:right;
 }
 
 .drawMe {

@@ -160,8 +160,11 @@ function bindProjectsButtons(){
     $('.oveWebsite .linkButton').on('click', function(){
         window.open('http://michaelgenty.com/OVE-website/', '_blank');
     });
-     $('.unityGame .linkButton').on('click', function(){
+    $('.unityGame .linkButton').on('click', function(){
         window.open('', '_blank');
+    });
+    $('.itycom .linkButton').on('click', function(){
+        window.open('http://www.itystudio.com/', '_blank');
     });
 }
 
