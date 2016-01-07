@@ -26,6 +26,7 @@
     <link href="assets/NotificationStyles/css/ns-style-growl-top.css" rel="stylesheet">
     <link href="assets/NotificationStyles/css/ns-default.css" rel="stylesheet">
 
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
 
@@ -79,7 +80,7 @@
                 <div class="background-color"></div>
                 <div id="particles-js"></div>
                 <section id="presentation" class="description">
-                   
+
                     <h1>Michael Genty</h1>
                     <p>Hi! I'm a 22 years old developer from Annecy, a beautiful town!
                         And I'm a second year <a title="Concepteur Réalisateur Multimedia">CRM</a> student at Gobelins, l'école de l'image.
@@ -103,6 +104,7 @@
                         <section class="description introduction">
                             ...HTML5 - JS - CSS3 - AS3 - PHP...
                             <p>Here you can find some projects I realized.<br/>
+                                Or you can also see my photography section<br/>
                                 Scroll down to continue
                             </p>
                         </section>
@@ -131,11 +133,11 @@
 
                                         <div class="text">
                                             OVE is a first year school project at Gobelins, in a two-person team. I was charged to develop
-                                            the mobile application and the website.
+                                            the prototypes of the mobile application and website.
                                             The goal of this experimental project was to open the mind of the people on the world around them.
                                         </div>
                                         <div class="link-container">
-                                            <button class="linkButton">Visit project website</button>
+                                            <button class="linkButton right">Visit project website</button>
                                         </div>
                                     </div>
                                 </div>
@@ -145,7 +147,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="second">
+                       <!-- <article class="second">
                             <div class="row">
                                 <div class="col-md-6">
                                     <img class="image blackHole" src="img/pong/black-hole.png"/>
@@ -164,8 +166,31 @@
                                     </div>
                                 </div>
                             </div>
-                        </article>
+                        </article>-->
+                        <article class="second itycom">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img class="image" src="img/itycom/itycom.png"/>
+                                </div>
+                                <div class="description-timeline col-md-6 animated anim2 slideOutRight">
+                                    <div class="text-project">
+                                        <div class="article-title">Itycom</div>
+                                        <div class="specs">HTML5 - JS - PHP - AS3</div>
 
+                                        <img class="image-mobile" src="img/itycom/itycom.png"/>
+
+                                        <div class="text">
+                                            I work at Itycom as a multimedia developer, a society specialized in e-learning and serious games.
+                                            <br/>For example, with ITyStudio, you can create your own scenario with characters of your choice. <br/>Make them interact, discuss and animate them!
+
+                                        </div>
+                                        <div class="link-container">
+                                            <button class="linkButton left">Visit website</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                         <article class="third unityGame">
                             <div class="row">
                                 <div class="description-timeline col-md-6 animated anim3 slideOutLeft">
@@ -181,7 +206,7 @@
                                             Use arrows keys to move and space key to jump.
                                         </div>
                                         <div class="link-container">
-                                            <button class="linkButton">Play the game</button>
+                                            <button class="linkButton right">Play the game</button>
                                         </div>
                                     </div>
                                 </div>
@@ -191,7 +216,7 @@
                             </div>
                         </article>
 
-                        <article class="fourth">
+                        <!--<article class="fourth">
                             <div class="row">
                                 <div class="col-md-6">
                                     <img class="image drawMe" src="img/drawMe/drawMe.png"/>
@@ -207,6 +232,32 @@
                                             DrawMe was developed from a topic proposed by the FrenchTech.
                                             The subject was to connect two city together in an original way.
                                             A user makes a pose while the second drew around him, via webcam , with some colored objects.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>-->
+                        <article class="fourth mobile-games">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img class="image" src="img/pong/black-hole.png"/>
+                                    <img class="image-bis" src="img/pong/black-hole.png"/>
+                                </div>
+                                <div class="description-timeline col-md-6 animated anim4 slideOutRight">
+                                    <div class="text-project">
+                                        <div class="article-title">Mobile games</div>
+                                        <div class="specs">HTML5 - Cordova  - Pixi.js / AS3 - Starling</div>
+
+                                        <img class="image-mobile" src="img/pong/black-hole.png"/>
+                                        <img class="image-mobile-bis" src="img/pong/black-hole.png"/>
+
+                                        <div class="text">
+                                            Original isn't it? In this mobile pong game, two players can compete on the same device, until finger cramps!
+                                            Some obstacles and bonus are implemented, like black holes, walls and multi balls.
+                                        </div>
+                                        <div class="link-container">
+                                            <button class="linkButton-pong left">Pong</button>
+                                            <button class="linkButton-flamingo right">Flamingo</button>
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +312,13 @@
                     </div>
                 </div>
             </div>
-
+         <div id="photo-page" class="gallery-cell">
+             <div class="container">
+                 <div class="row">
+                     photos page
+                 </div>
+             </div>
+         </div>
              <!--    <div id="project-page" class="gallery-cell" >
                      <div class="container">
                          <div class="row">
@@ -277,6 +334,7 @@
 
 </body>
 
+
 <script src="vendor/ScrollMagic.min.js"></script>
 
 <script src="vendor/flickity.pkgd.js"></script>
@@ -289,6 +347,7 @@
 
 <script src="assets/NotificationStyles/js/modernizr.custom.js"></script>
 <script src="assets/NotificationStyles/js/notificationFx.js"></script>
+
 
 <script src="js/app.js"></script>
 
@@ -309,7 +368,6 @@
             // show the notification
             notification.show();
         }, 1200 );
-
     });
 </script>
 

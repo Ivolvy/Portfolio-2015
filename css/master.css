@@ -525,6 +525,13 @@ html, body {
     margin-top: 42px;
 }
 
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
 .specs{
     color: #fccc1d;
 }
@@ -564,6 +571,30 @@ html, body {
     margin-left: 35px;
 }
 
+.itycom .image-mobile, .itycom .image{
+    /*width: 495px;*/
+    width: 100%;
+    margin-right: 35px;
+    float:right;
+}
+
+.mobile-games .image, .mobile-games .image-bis{
+    width: 75%;
+    float: right;
+}
+.mobile-games .image{
+    margin-right: 180px;
+}
+.mobile-games .image-bis{
+    margin-top: -20%;;
+}
+
+.mobile-games .image-mobile, .mobile-games .image-mobile-bis{
+    width: 100%;
+    margin-right: 35px;
+    float:right;
+}
+
 .drawMe {
     /*width: 495px;*/
     width: 100%;
@@ -584,7 +615,7 @@ html, body {
     padding-left: 30px;
 }
 
-.image-mobile{
+.image-mobile, .image-mobile-bis{
     display: none;
 }
 
@@ -667,20 +698,21 @@ html, body {
     .description-timeline{
         text-align: left;
     }
-    .timeline .image{
+    .timeline .image, .timeline .image-bis{
         display: none;
-    }
-    .timeline .image{
         padding:0;
         margin:0;
     }
     .container{
         max-width: none!important;
     }
-    .image-mobile{
+    .image-mobile, .image-mobile-bis{
         display: block!important;
         padding: 30px 0;
         margin: 0!important;
+    }
+    .image-mobile-bis{
+        margin-top: -150px!important;
     }
     #particles-js{
         display: none;
