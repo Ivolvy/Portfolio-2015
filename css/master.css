@@ -440,7 +440,8 @@ html, body {
 #introduction-page {
     overflow: auto;
     /*background: #f4f3f8;*/
-    background-color: #1D262E;
+    /*background-color: #1D262E;*/
+    background-color: rgb(43, 55, 66);
     color: #FFF;
     overflow-x: hidden;
     /*padding-bottom: 200px;*/
