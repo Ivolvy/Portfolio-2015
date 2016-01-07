@@ -166,6 +166,12 @@ function bindProjectsButtons(){
     $('.itycom .linkButton').on('click', function(){
         window.open('http://www.itystudio.com/', '_blank');
     });
+    $('.mobile-games .linkButton-pong').on('click', function(){
+        window.open('', '_blank');
+    });
+    $('.mobile-games .linkButton-flamingo').on('click', function(){
+        window.open('', '_blank');
+    });
 }
 
 
