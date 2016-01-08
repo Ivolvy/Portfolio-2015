@@ -189,3 +189,34 @@ function photosMenuEvent(){
         $(this).css({'opacity': '1'});
     });
 }
+
+
+
+/*Get all the images for a type/category selected in the corresponding folder*/
+function displayImagesType(type){
+    var folderPath = 'img/';
+    getImagesNameFromFolder(folderPath, type);
+}
+/*Display the retrieved images in the grid*/
+function displayImagesInGrid(results, type){
+    for(var i = 0; i<results.length;i++){
+        $('.grid').append('<div class="grid-item '+type+'">' +
+        '<a class="fancybox" rel="group" href="'+results[i]+'">' +
+            '<img src="'+results[i]+'"/>' +
+        '</a>' +
+        '</div>');
+    }
+}
+/*Get the path and name of the images with php function*/
+function getImagesNameFromFolder(folderPath, type){
+    $.post('listImages.php', {
+        'folder':folderPath+type
+    },$(this).serialize())
+        .done(function(data){
+            var results = JSON.parse(data);
+            displayImagesInGrid(results, type);
+        })
+        .error(function(){
+            alert('error');
+        });
+}

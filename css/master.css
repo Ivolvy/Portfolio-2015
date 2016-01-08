@@ -751,7 +751,7 @@ html, body {
     width: 33.333%;
 }
 .grid-item{
-    width: 32.800%;
+    width: 32%;
 }
 
 .grid-item {
@@ -798,6 +798,9 @@ html, body {
     float: left;
     list-style: none none;
     width: 200px;
+}
+.photos-menu h3{
+    margin: 1em 0;
 }
 .photos-menu ul{
     padding: 0;

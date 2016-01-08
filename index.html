@@ -320,43 +320,15 @@
                      <nav class="photos-menu">
                          <ul>
                              <h3>CATEGORIES</h3>
-                             <li><a class="" data-filter="*" style="opacity: 0.5;">Toutes</a></li>
-                             <li><a class="" data-filter=".test" style="opacity: 0.5;">Souvenir</a></li>
-                             <li><a class="" data-filter="*" style="opacity: 0.5;">Mode</a></li>
-                             <li><a class="" data-filter="*" style="opacity: 0.5;">Mariage</a></li>
-                             <li><a class="" data-filter="*" style="opacity: 0.5;">Surrealisme</a></li>
-                             <li><a class="" data-filter="*" style="opacity: 0.5;">Portrait</a></li>
-                             <li><a class="" data-filter="*" style="opacity: 0.5;">Voyage</a></li>
-                             <li><a class="" data-filter="*" style="opacity: 0.5;">Architecture</a></li>
+                             <li><a class="" data-filter="*" style="opacity: 0.5;">All</a></li>
+                             <li><a class="" data-filter="portrait" style="opacity: 0.5;">Portrait</a></li>
+                             <li><a class="" data-filter="travel" style="opacity: 0.5;">Travel</a></li>
+                             <li><a class="" data-filter="architecture" style="opacity: 0.5;">Architecture</a></li>
                          </ul>
                      </nav>
                      <div class="grid">
                          <div class="grid-sizer"></div>
-                         <div class="grid-item test">
-                             <a class="fancybox" rel="group" href="img/photos/1.png">
-                                 <img src="img/photos/1.png"/> <!-- put little image (example 505x353); and big image when we click: example(about 1200x759) -->
-                             </a>
-                         </div>
-                         <div class="grid-item">
-                             <a class="fancybox" rel="group" href="img/photos/2.png">
-                                <img src="img/photos/2.png"/>
-                            </a>
-                         </div>
-                         <div class="grid-item">
-                             <a class="fancybox" rel="group" href="img/photos/3.png">
-                                 <img src="img/photos/3.png"/>
-                             </a>
-                         </div>
-                         <div class="grid-item test">
-                             <a class="fancybox" rel="group" href="img/photos/4.png">
-                                 <img src="img/photos/4.png"/>
-                             </a>
-                         </div>
-                         <div class="grid-item">
-                             <a class="fancybox" rel="group" href="img/photos/5.png">
-                                 <img src="img/photos/5.png"/>
-                             </a>
-                         </div>
+                         <!-- images will be load dynamically here-->
                      </div>
                 </div>
              </div>
@@ -419,6 +391,13 @@
 
 
 <script>
+
+
+    displayImagesType('portrait');
+    displayImagesType('travel');
+    displayImagesType('architecture');
+
+
     $(document).ready( function() {
         // init Isotope
         var $grid = $('.grid').isotope({
