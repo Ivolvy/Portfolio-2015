@@ -724,4 +724,43 @@ html, body {
     .linkButton{
         float: none;
     }
+    .grid-sizer,
+    .grid-item {
+        width: 50%!important;
+    }
+}
+
+
+
+
+
+
+/*FLICKITY*/
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+#photo-page .title {
+    text-align: center;
+    font-size: 50px;
+    padding: 100px;
 }
