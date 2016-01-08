@@ -724,9 +724,11 @@ html, body {
     .linkButton{
         float: none;
     }
-    .grid-sizer,
-    .grid-item {
+    .grid-sizer{
         width: 50%!important;
+    }
+    .grid-item {
+        width: 49.467%!important;
     }
 }
 
@@ -745,22 +747,83 @@ html, body {
 
 /* ---- .grid-item ---- */
 
-.grid-sizer,
-.grid-item {
+.grid-sizer {
     width: 33.333%;
+}
+.grid-item{
+    width: 32.800%;
 }
 
 .grid-item {
     float: left;
+    overflow: hidden;
 }
 
 .grid-item img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+}
+.grid-item img:hover{
+    opacity: 0.9;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
 }
 
 #photo-page .title {
     text-align: center;
     font-size: 50px;
     padding: 100px;
+}
+
+
+
+.photos-wrapper{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.photos-wrapper .grid{
+    float: right;
+    width: 80%;
+    padding: 0;
+    margin: 0;
+}
+.photos-menu{
+    float: left;
+    list-style: none none;
+    width: 200px;
+}
+.photos-menu ul{
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+.photos-menu li{
+    margin-bottom: 10px;
+    list-style: none none;
+}
+
+.photos-menu a{
+    color: #000;
+    text-decoration: none!important;
+    opacity: 0.5;
+    transition-duration: 500ms;
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    cursor: pointer;
+}
+.photos-menu a:hover{
+    color: #000;
+}
+.photos-menu h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ababab;
+    padding-bottom: 1em;
+    text-transform: uppercase;
 }

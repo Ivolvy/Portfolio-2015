@@ -153,6 +153,7 @@ $(document).ready(function(){
     mouseDrag = $(window).width() >= 767;
 
     bindProjectsButtons();
+    photosMenuEvent();
 });
 
 //
@@ -179,3 +180,12 @@ function bindProjectsButtons(){
 window.addEventListener('resize', function(event){
     mouseDrag = $(window).width() >= 767;
 });
+
+
+
+function photosMenuEvent(){
+    $('.photos-menu a').on('click', function(){
+        $('.photos-menu a').css({'opacity': '0.5'});
+        $(this).css({'opacity': '1'});
+    });
+}
