@@ -95,11 +95,12 @@
 	position: absolute;
 	top: 33px;
 	left: 33px;
-	width: 59px;
-	height: 59px;
+	width: 30px;
+	height: 30px;
 	cursor: pointer;
 	z-index: 8040;
-	background-image: url(../../img/croix.png);
+	background-image: url(../img/fancybox/croix.png);
+	background-size: cover;
 	transition:1s;
 }
 .fancybox-close:hover{
@@ -115,7 +116,7 @@
 	height: 100%;
 	cursor: pointer;
 	text-decoration: none;
-	background: transparent url('blank.gif'); /* helps IE */
+	/*background: transparent url('blank.gif'); /* helps IE */
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	z-index: 8040;
 }
@@ -141,7 +142,7 @@
 
 .fancybox-prev span {
 	left: 10px;
-	background-image:url(../../img/prev.png);
+	background-image:url(../img/fancybox/prev.png);
 }
 .fancybox-prev span:hover{
 	background-position: 31px 0;
@@ -149,7 +150,7 @@
 }
 .fancybox-next span {
 	right: 10px;
-	background-image:url(../../img/next.png);
+	background-image:url(../img/fancybox/next.png);
 }
 .fancybox-next span:hover{
 	background-position: -31px 0;
@@ -191,7 +192,7 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: url('fancybox_overlay.png');
+	/*background: url('fancybox_overlay.png');*/
 }
 
 .fancybox-overlay-fixed {
@@ -272,22 +273,23 @@ only screen and (min-device-pixel-ratio: 1.5){
 
 	.fancybox-next span {
 		right: 10px;
-		background-image:url(../img/next.png);
+		background-image:url(../img/fancybox/next.png);
 	}
 	.fancybox-prev span {
 		left: 10px;
-		background-image:url(../img/prev.png);
+		background-image:url(../img/fancybox/prev.png);
 	}
 
 	.fancybox-close {
 		position: absolute;
 		top: 33px;
 		left: 33px;
-		width: 59px;
-		height: 59px;
+		width: 30px;
+		height: 30px;
 		cursor: pointer;
 		z-index: 8040;
-		background-image: url(../img/croix.png);
+		background-image: url(../img/fancybox/croix.png);
+		background-size: cover;
 		transition:1s;
 	}
 }

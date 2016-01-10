@@ -11,6 +11,30 @@ html, body {
 .overlay-menu a{
     cursor: pointer;
 }
+.follow{
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    display: block;
+    opacity: 0;
+}
+.follow a{
+    text-decoration: none;
+    color: #fff;
+}
+.follow a:hover{
+    color: #fff;
+}
+.follow a:visited{
+    color: #fff;
+}
+.title-follow{
+    margin-bottom: 5px;
+}
 
 .background-color {
     background-color: rgba(29,38,46,0.7);
@@ -287,7 +311,7 @@ html, body {
 .overlay nav {
     position: relative;
     height: 70%;
-    top: 61%;  /*50% original*/
+    top: 51%;  /*50% original*/
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -321,7 +345,7 @@ html, body {
     opacity: 0;
 }
 
-.overlay.open li {
+.overlay.open li, .overlay.open .follow{
     -webkit-animation: fadeInUp .5s ease forwards;
     animation: fadeInUp .5s ease forwards;
     -webkit-animation-delay: .35s;
@@ -348,6 +372,11 @@ html, body {
     animation-delay: .55s;
 }
 
+.overlay.open .follow{
+    -webkit-animation-delay: .55s;
+    animation-delay: .60s;
+}
+
 .overlay ul li a {
     display: block;
     position: relative;
@@ -364,7 +393,7 @@ html, body {
     position: absolute;
     bottom: -10px;
     left: 50%;
-    width: 0%;
+    width: 0;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -393,7 +422,7 @@ html, body {
 }
 
 .introduction{
-    height: 60px;
+    height: 107px;
 }
 
 .home-page {
@@ -454,7 +483,7 @@ html, body {
 #introduction-page .title {
     text-align: center;
     font-size: 50px;
-    padding: 100px;
+    padding-top: 100px;
 }
 
 #introduction-page .container {
@@ -469,6 +498,16 @@ html, body {
     z-index: 50;
 }
 
+#presentation a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF;
+}
+#presentation a{
+    text-decoration: none;
+    color: #FFF;
+}
+
 .scroll-btn {
     position: absolute;
     left: 0px;
@@ -479,6 +518,16 @@ html, body {
     line-height: 1.28;
     color: #fff;
     z-index: 4;
+    padding-left: 17px;
+}
+
+.introduction .list-code{
+    font-style: italic;
+}
+
+.introduction .to-photo{
+    cursor: pointer;
+    font-weight: bold;
 }
 
 #introduction-page article.first {
@@ -625,7 +674,9 @@ html, body {
 
 .timeline {
     position: relative;
-    margin-bottom: 200px
+    padding-bottom: 200px;
+    padding-top: 200px;
+    background: url(../img/indexb.png);
 }
 
 .timeline-line {
@@ -633,11 +684,11 @@ html, body {
     padding: 0;
     position: absolute;
     z-index: 5;
-    top: 0;
+    top: 200px;
     left: 50%;
     width: 4px;
-    height: 100%;
-    background: #6DD680;
+    height: 85%;
+    background: #6DD6CD;
 }
 
 
@@ -646,7 +697,7 @@ html, body {
 /*----------------------------------------------*/
 
 #contact-page {
-    background: #f4f3f8;
+    background: #fefefe;
     overflow: auto;
 }
 
@@ -677,12 +728,43 @@ html, body {
 #top-pres{
     height:100%;
     width:100%;
-    margin-bottom: 200px;
 }
 
 /*----------------------------------------------*/
 /*----------------RESPONSIVITY------------------*/
 /*----------------------------------------------*/
+
+@media (max-width: 1000px) {
+    .grid-sizer{
+        width: 50%!important;
+    }
+    .grid-item {
+        width: 49.467%!important;
+    }
+
+    .photos-menu h3{
+        display: none;
+    }
+    .photos-menu {
+        float: none!important;
+        width: 100%!important;
+    }
+    .photos-menu li {
+        display: inline-block;
+        padding: 0 16px;
+    }
+    #photo-page .title {
+        padding-bottom: 80px!important;
+    }
+    .photos-wrapper .grid {
+        float: none!important;
+        width: 100%!important;
+        margin-top: 40px!important;
+    }
+    .photos-wrapper {
+        max-width: 90%!important;
+    }
+}
 
 @media (max-width: 767px) {
     .timeline article {
@@ -694,6 +776,10 @@ html, body {
     .text-project{
         margin: 0 0 100px;
         padding: 0!important;
+    }
+    .description{
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .description-timeline{
         text-align: left;
@@ -724,15 +810,13 @@ html, body {
     .linkButton{
         float: none;
     }
-    .grid-sizer{
-        width: 50%!important;
-    }
-    .grid-item {
-        width: 49.467%!important;
-    }
 }
 
-
+@media (max-width: 480px) {
+    .grid-item {
+        width: 100%!important;
+    }
+}
 
 
 
@@ -757,6 +841,7 @@ html, body {
 .grid-item {
     float: left;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .grid-item img {
@@ -776,13 +861,21 @@ html, body {
     -webkit-transform: scale(1.15);
 }
 
+
+#photo-page{
+    background: url(../img/index3.png);
+}
+
 #photo-page .title {
     text-align: center;
     font-size: 50px;
-    padding: 100px;
+    padding: 60px 0 140px;
 }
 
-
+.photos-container{
+    height: 100%;
+    overflow: auto;
+}
 
 .photos-wrapper{
     max-width: 80%;
@@ -792,15 +885,16 @@ html, body {
     float: right;
     width: 80%;
     padding: 0;
-    margin: 0;
+    margin: 0 0 50px 0;
 }
 .photos-menu{
     float: left;
     list-style: none none;
-    width: 200px;
+    width: 18%;
 }
 .photos-menu h3{
-    margin: 1em 0;
+    font-size: 23px;
+    font-weight: bold;
 }
 .photos-menu ul{
     padding: 0;

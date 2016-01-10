@@ -2573,7 +2573,7 @@
 // go previous/next if left/right keys pressed
     Flickity.prototype.onkeydown = function( event ) {
         // only work if element is in focus
-        if ( !this.options.accessibility ||
+      /*  if ( !this.options.accessibility ||
             ( document.activeElement && document.activeElement != this.element ) ) {
             return;
         }
@@ -2588,7 +2588,7 @@
             var rightMethod = this.options.rightToLeft ? 'previous' : 'next';
             this.uiChange();
             this[ rightMethod ]();
-        }
+        }*/
     };
 
 // -------------------------- destroy -------------------------- //
