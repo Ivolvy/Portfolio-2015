@@ -54,6 +54,7 @@ App.prototype.initLoader = function(){
     $(window).load(function(){
         $('body').toggleClass('loaded');
         $("#introduction-background").backstretch("img/background/back-sun.jpg");
+        $("#presentation-background").backstretch("img/background/back-mountains.jpg");
 
         //loads images and isotope when we display the first page of the website
         //(So we are waiting less time for the website to load)

@@ -426,10 +426,9 @@ html, body {
 }
 
 .home-page {
-    background: url("../img/background/back-mountains.jpg") no-repeat center center fixed;
-    background-size: cover;
-    /*background-color: #f4f3f8;
-    color: #000;*/
+    /*background: url("../img/background/back-mountains.jpg") no-repeat center center fixed;*/
+    /*background-size: cover;*/
+    /*background-color: #f4f3f8;*/
     /*background-color: #1D262E;*/
     color: #FFF;
 }
@@ -476,7 +475,7 @@ html, body {
     /*padding-bottom: 200px;*/
 }
 
-#introduction-background{
+#introduction-background, #presentation-background{
     width:100%;height:100%;background: none;position:absolute
 }
 
@@ -809,6 +808,13 @@ html, body {
     }
     .linkButton{
         float: none;
+    }
+    #hamb-menu{
+        right: 26px;
+        margin: 26px auto;
+    }
+    .overlay nav {
+        top: 48%;
     }
 }
 
