@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'MarkPro-Black';
+    src: url('../fonts/MarkPro-Black/MarkPro-Black.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/MarkPro-Black/MarkPro-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/MarkPro-Black/MarkPro-Black.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/MarkPro-Black/MarkPro-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/MarkPro-Black/MarkPro-Black.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 
 html, body {
     height: 100%;
@@ -382,6 +390,7 @@ html, body {
     position: relative;
     color: #FFF;
     text-decoration: none;
+    font-family: MarkPro-Black, sans-serif;
 }
 
 .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
@@ -407,18 +416,18 @@ html, body {
 /*----------------HOME PAGE VIEW----------------*/
 /*----------------------------------------------*/
 
-.description {
-    max-width: 430px;
+.home-page .description {
     margin: auto;
-    text-align: center;
+    text-align: right;
     vertical-align: middle;
-    height: 200px;
     position: absolute;
-    top: 0;
+    top: 230px;
     bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 18px;
+    font-weight: 600;
+    right: 150px;
+    max-width: 600px;
+    font-size: 25px;
+    height: 160px;
 }
 
 .introduction{
@@ -480,11 +489,23 @@ html, body {
 }
 
 #introduction-page .title {
-    text-align: center;
-    font-size: 50px;
-    padding-top: 100px;
+    margin-top: 130px;
+    margin-left: 110px;
+    font-family: MarkPro-Black, sans-serif;
+    text-transform: uppercase;
+    font-size: 10em;
 }
-
+#introduction-page .description{
+    margin: auto;
+    text-align: right;
+    vertical-align: middle;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    font-weight: 600;
+    right: 150px;
+    font-size: 25px;
+}
 #introduction-page .container {
     /*width: 1200px;*/
     padding-right: 15px;
@@ -495,6 +516,15 @@ html, body {
 
 #presentation{
     z-index: 50;
+}
+#presentation .title{
+    margin-top: 140px;
+    margin-left: 110px;
+    font-family: MarkPro-Black, sans-serif;
+    text-transform: uppercase;
+    font-size: 10em;
+    line-height: 1em;
+    width: 800px;
 }
 
 #presentation a{
@@ -509,8 +539,8 @@ html, body {
 
 .scroll-btn {
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     bottom: 55px;
     text-align: center;
     font-size: 93%;
@@ -702,8 +732,10 @@ html, body {
 
 #contact-page .title {
     text-align: center;
-    font-size: 50px;
+    font-size: 5em;
+    line-height: 1em;
     padding: 100px;
+    font-family: MarkPro-Black, sans-serif;
 }
 
 #contact-page #message-input textarea,
@@ -732,6 +764,22 @@ html, body {
 /*----------------------------------------------*/
 /*----------------RESPONSIVITY------------------*/
 /*----------------------------------------------*/
+
+@media (max-width: 1240px) {
+    #presentation .title {
+        font-size: 9em;
+    }
+    .home-page .description {
+        right: 70px;
+    }
+}
+@media (max-width: 1070px) {
+    #introduction-page .title {
+        margin-top: 130px;
+        margin-left: 110px;
+        font-size: 7em;
+    }
+}
 
 @media (max-width: 1000px) {
     .grid-sizer{
@@ -764,7 +812,65 @@ html, body {
         max-width: 90%!important;
     }
 }
+@media (max-width: 855px) {
+    .home-page .description {
+        top: 280px;
+    }
+    .quote {
+        bottom: 30px;
+    }
+    #contact-page .title {
+        text-align: center;
+        font-size: 5em;
+        line-height: 1em;
+        padding: 100px 100px 20px 100px;
+        font-family: MarkPro-Black, sans-serif;
+    }
+}
 
+@media (max-width: 855px) {
+    #presentation .title {
+        margin-left:0;
+        margin-top: 140px;
+        font-family: MarkPro-Black, sans-serif;
+        text-transform: uppercase;
+        font-size: 6em;
+        text-align: center;
+        line-height: 1em;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .home-page .description {
+        margin: auto;
+        text-align: center;
+        vertical-align: middle;
+        position: absolute;
+        top: 200px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        max-width: 600px;
+        font-size: 25px;
+        height: 160px;
+    }
+    #introduction-page .title {
+        text-align: center;
+        margin-left: 0;
+        font-size: 7em;
+    }
+    #introduction-page .description {
+        margin: auto;
+        text-align: center;
+        vertical-align: middle;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        font-weight: 600;
+        right: 0;
+        font-size: 25px;
+    }
+}
 @media (max-width: 767px) {
     .timeline article {
         padding: 0!important;
@@ -874,8 +980,9 @@ html, body {
 
 #photo-page .title {
     text-align: center;
-    font-size: 50px;
     padding: 60px 0 140px;
+    font-size: 5em;
+    font-family: MarkPro-Black, sans-serif;
 }
 
 .photos-container{
