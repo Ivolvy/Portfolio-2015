@@ -600,7 +600,16 @@ html, body {
     line-height: 50px;
     text-align: center;
     float: right;
+    border-radius: 7px;
+    box-shadow: 0 5px #3b9383;
     margin-top: 42px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.linkButton:hover{
+    background: #34af97;
 }
 
 .left{
