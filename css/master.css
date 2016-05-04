@@ -45,7 +45,7 @@ html, body {
 }
 
 .background-color {
-    background-color: rgba(29,38,46,0.7);
+    background-color: rgba(29,38,46,0.3);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -446,12 +446,13 @@ html, body {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 100px;
+    bottom: 7%;
     text-align: center;
     font-size: 93%;
     line-height: 1.28;
     color: #fff;
     z-index: 50;
+    font-weight: 700;
 }
 
 .tips {
