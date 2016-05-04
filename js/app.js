@@ -53,7 +53,7 @@ App.prototype.initLoader = function(){
 
     $(window).load(function(){
         $('body').toggleClass('loaded');
-        $("#introduction-background").backstretch("img/background/back-sun.jpg");
+        $("#introduction-background").backstretch("img/background/moutain-semnoz.jpg");
         $("#presentation-background").backstretch("img/background/back-mountains.jpg");
 
         //loads images and isotope when we display the first page of the website
