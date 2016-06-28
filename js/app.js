@@ -51,10 +51,11 @@ App.prototype.initVars = function(){
 App.prototype.initLoader = function(){
     var that = this;
 
+    $("#introduction-background").backstretch("img/background/back-sun.jpg");
+    $("#presentation-background").backstretch("img/background/back-mountains.jpg");
+
     $(window).load(function(){
         $('body').toggleClass('loaded');
-        $("#introduction-background").backstretch("img/background/back-sun.jpg");
-        $("#presentation-background").backstretch("img/background/back-mountains.jpg");
 
         //loads images and isotope when we display the first page of the website
         //(So we are waiting less time for the website to load)
@@ -255,16 +256,16 @@ App.prototype.bindProjectsPageButtons = function(){
         window.open('http://michaelgenty.com/OVE-website/', '_blank');
     });
     $('.unityGame .linkButton').on('click', function(){
-        window.open('', '_blank');
+        window.open('../sources/UnityGame/index.html', '_blank');
     });
     $('.itycom .linkButton').on('click', function(){
         window.open('http://www.itystudio.com/', '_blank');
     });
     $('.mobile-games .linkButton-pong').on('click', function(){
-        window.open('', '_blank');
+        window.open('../sources/pong/PongGame.apk', '_blank');
     });
     $('.mobile-games .linkButton-flamingo').on('click', function(){
-        window.open('', '_blank');
+        window.open('../sources/flamingo/flamingooo.apk', '_blank');
     });
 };
 
