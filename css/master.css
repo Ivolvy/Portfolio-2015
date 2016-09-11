@@ -78,6 +78,7 @@ html, body {
     margin-left: -25px;
 }
 
+
 /*----------------------------------------------*/
 /*-----------------LOADER SCREEN----------------*/
 /*----------------------------------------------*/
@@ -87,7 +88,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .loader,
@@ -333,6 +334,9 @@ html, body {
 }
 
 .hide {
+    display: none !important;
+}
+.hidden{
     display: none !important;
 }
 

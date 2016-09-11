@@ -1,0 +1,123 @@
+/*----------------------------------------------*/
+/*--------------PORTFOLIO SECTION----------------*/
+/*----------------------------------------------*/
+#portfolio-section{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#portfolio-section .panels{
+    height:100%;
+}
+
+.photographer-section, .developer-section {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+}
+
+.developer-section{
+    right: 0;
+}
+
+.photographer-section .back{
+    background: url(../img/background/photographer-section.jpg) no-repeat left;
+    background-size: cover;
+    text-align: center;
+}
+.developer-section .back{
+    background: url(../img/background/developer-section.jpg) no-repeat right;
+    background-size: cover;
+    text-align: center;
+}
+
+#portfolio-section .content{
+    position: absolute;
+    color: #FFF;
+    text-align: left;
+    top: 0;
+    width: 100%;
+    font-size: 87px;
+    font-weight: bold;
+    padding: 50px 20px 0 90px;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    opacity: 0.9;
+}
+#portfolio-section .back{
+    height: 100%;
+}
+#portfolio-section .overlay-section{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background .35s ease-out;
+    transition: background .35s ease-out;
+}
+#portfolio-section .overlay-section.active{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#portfolio-section .panel{
+    -webkit-transition: width .35s;
+    transition: width .35s;
+}
+
+.z-index-1{
+    z-index: 1!important;
+}
+.z-index-4{
+    z-index: 4;
+}
+
+.section-button{
+    z-index: 2;
+    margin-top: 600px;
+}
+
+@media (min-width: 570px) {
+    .panel.shrink-left{
+        width: 50%;
+    }
+    .panel.shrink-right{
+
+        width: 50%;
+    }
+    .panel.expand{
+        width: 54%;
+    }
+}
+
+@media (max-width: 975px) {
+    .photographer-section, .developer-section {
+        width: 100%;
+        height: 50%;
+        display: block;
+        position: relative;
+    }
+}
+@media (max-width: 855px) {
+    #portfolio-section .content {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        font-size: 42px;
+        font-weight: bold;
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        word-wrap: break-word;
+        width: 360px;
+    }
+}

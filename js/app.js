@@ -3,6 +3,8 @@ var App = function(){};
 
 
 App.prototype.init = function(){
+    $('#portfolio-section').addClass('hidden');
+    //$('#loader-wrapper').css({'display': 'block'});
     this.initVars();
     this.initLoader();
 
@@ -54,7 +56,7 @@ App.prototype.initLoader = function(){
     $("#introduction-background").backstretch("img/background/back-sun.jpg");
     $("#presentation-background").backstretch("img/background/back-mountains.jpg");
 
-    $(window).load(function(){
+    $( document ).ready(function() {
         $('body').toggleClass('loaded');
 
         //loads images and isotope when we display the first page of the website
@@ -431,4 +433,4 @@ App.prototype.initFancybox = function(){
 
 /*Launch the robot*/
 var app = new App();
-app.init();
+//app.init();
